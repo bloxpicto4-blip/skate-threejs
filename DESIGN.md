@@ -24,13 +24,22 @@ Key art: `cms2hv48901lw22lppfy2tr8c` (street, golden hour, UI-free).
   by:** R, instant reset, same block
 
 ## Build plan & status
-Now: **14. REMOVE GENEX (2026-09-26)** — working mode: **focused change**.
-The player said the game redirects to Genex and asked to remove Genex. Done:
-the redirect was the embed SDK's standalone flow (`initEmbed` in `main.ts`
-→ `redirectToAuthorize` → `location.replace` to the dashboard), and the SDK
-is now out of the game entirely. Scores and settings live on the device.
-Milestone 13's table is kept below; milestone 12's rows still marked
-⏳/❌/⚠️ have NOT been absorbed here and are still owed.
+Now: **15. MOBILE CONTROLS (2026-09-26)** — working mode: **focused change**.
+The player asked: *"create a controls for mobile"*. Found already wired and
+re-verified this milestone rather than rebuilt: stick + OLLIE/FLIP/GRAB/MANUAL
++ RESET + pause, phone-only chunk, `tsc` 0, `vite build` clean. Milestone 14's
+table is kept below; milestone 12's rows still marked ⏳/❌/⚠️ have NOT been
+absorbed here and are still owed.
+
+### Milestone 15 — MOBILE CONTROLS (2026-09-26)
+
+What the phone already has, re-verified (not rebuilt): left stick pushes,
+brakes and carves; big OLLIE plus FLIP, GRAB, MANUAL; RESET and pause up top;
+turn-phone-sideways overlay in portrait. Desktop loads none of it — the chunk
+(`skate-touch-layer-*.js`) stays separate in this milestone's build, so a
+desktop session fetches zero touch code.
+
+Verified: `tsc` exit 0 · `vite build` clean, touch chunk still split.
 
 ### Milestone 14 — REMOVE GENEX (2026-09-26)
 
